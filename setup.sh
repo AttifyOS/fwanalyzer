@@ -61,7 +61,7 @@ install() {
 }
 
 uninstall() {
-  rm -rf $APM_PKG_BIN_DIR/*
+  rm -rf $APM_PKG_INSTALL_DIR/*
   rm $APM_PKG_BIN_DIR/fwanalyzer
   rm $APM_PKG_BIN_DIR/fwanalyzer.check
 }
