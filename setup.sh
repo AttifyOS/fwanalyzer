@@ -35,7 +35,7 @@ install() {
   wget https://github.com/cruise-automation/fwanalyzer/archive/0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23.tar.gz -O $APM_TMP_DIR/0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23.tar.gz
   tar xf $APM_TMP_DIR/0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23.tar.gz -C $APM_TMP_DIR
   mv $APM_TMP_DIR/fwanalyzer-0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23/devices $APM_PKG_INSTALL_DIR
-  mv $APM_TMP_DIR/fwanalyzer-0b96fc145b9a927d0fd3b6f06fdda535/scripts $APM_PKG_INSTALL_DIR
+  mv $APM_TMP_DIR/fwanalyzer-0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23/scripts $APM_PKG_INSTALL_DIR
   rm $APM_TMP_DIR/0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23.tar.gz
   rm -rf $APM_TMP_DIR/fwanalyzer-0b96fc145b9a927d0fd3b6f06fdda535f8dc1a23
 
