@@ -51,9 +51,9 @@ install() {
   echo "PATH=$APM_PKG_INSTALL_DIR/bin/:$APM_PKG_INSTALL_DIR/scripts/:$APM_PKG_INSTALL_DIR/python/bin/:\$PATH $APM_PKG_INSTALL_DIR/python/bin/python3.9 $APM_PKG_INSTALL_DIR/devices/check.py" >> $APM_PKG_BIN_DIR/fwanalyzer.check
   chmod +x $APM_PKG_BIN_DIR/fwanalyzer.check
 
-  sed "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/devices/check.py
-  sed "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/devices/android/check_ota.py
-  sed "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/scripts/prop2json.py
+  sed -i "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/devices/check.py
+  sed -i "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/devices/android/check_ota.py
+  sed -i "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/scripts/prop2json.py
 
   echo "This package adds the following commands:"
   echo " - fwanalyzer"
