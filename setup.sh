@@ -44,11 +44,11 @@ install() {
   rm $APM_TMP_DIR/fwanalyzer-build.tar.gz
 
   echo "#!/bin/bash" > $APM_PKG_BIN_DIR/fwanalyzer
-  echo "PATH=$APM_PKG_INSTALL_DIR/bin/:$APM_PKG_INSTALL_DIR/scripts/:$APM_PKG_INSTALL_DIR/python/bin/:\$PATH $APM_PKG_INSTALL_DIR/bin/fwanalyzer" >> $APM_PKG_BIN_DIR/fwanalyzer
+  echo "PATH=$APM_PKG_INSTALL_DIR/bin/:$APM_PKG_INSTALL_DIR/scripts/:$APM_PKG_INSTALL_DIR/python/bin/:\$PATH $APM_PKG_INSTALL_DIR/bin/fwanalyzer \"\$@\"" >> $APM_PKG_BIN_DIR/fwanalyzer
   chmod +x $APM_PKG_BIN_DIR/fwanalyzer
 
   echo "#!/bin/bash" > $APM_PKG_BIN_DIR/fwanalyzer.check
-  echo "PATH=$APM_PKG_INSTALL_DIR/bin/:$APM_PKG_INSTALL_DIR/scripts/:$APM_PKG_INSTALL_DIR/python/bin/:\$PATH $APM_PKG_INSTALL_DIR/python/bin/python3.9 $APM_PKG_INSTALL_DIR/devices/check.py" >> $APM_PKG_BIN_DIR/fwanalyzer.check
+  echo "PATH=$APM_PKG_INSTALL_DIR/bin/:$APM_PKG_INSTALL_DIR/scripts/:$APM_PKG_INSTALL_DIR/python/bin/:\$PATH $APM_PKG_INSTALL_DIR/python/bin/python3.9 $APM_PKG_INSTALL_DIR/devices/check.py \"\$@\"" >> $APM_PKG_BIN_DIR/fwanalyzer.check
   chmod +x $APM_PKG_BIN_DIR/fwanalyzer.check
 
   sed -i "1c #!$APM_PKG_INSTALL_DIR/python/bin/python3.9" $APM_PKG_INSTALL_DIR/devices/check.py
